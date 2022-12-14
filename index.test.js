@@ -27,18 +27,18 @@ test("mehr als zwei Argument? multipliziert alles", () => {
 })
 
 // Aufgabe 2.
-describe("theoremePythogoras", () => {
+describe("theoremePythagoras", () => {
     test("ist eine Funktion", () => {
         expect(hypotenuse).toBeInstanceOf(Function);
     })
    
     test("1. zweiArgumente", () => {
-        expect(hypotenuse(undefined, undefined)).toBe(false);
+        expect(hypotenuse(1)).toBe(false);
     })
     test("2. sindPositiv", () => {
-        expect(hypotenuse(Number, Number)).toBe(Number > 0, Number > 0)
+        expect(hypotenuse(Number)).toBe(Number > 0)
     })
-    // test("3. a^2 + b^2 = c^2", () => {
-    //     expect(hypotenuse()).toBe(c)
-    // })
+    test("3. a^2 + b^2 = c^2", () => {
+        expect(hypotenuse(3, 4)).toBe(5)
+    })
 })

@@ -11,8 +11,8 @@ function testFunction(...args) {
 };
 
 function hypotenuse( ...args ) {
-    if(args !== 2) return false;
-    const c = Math.sqrt(Math.pow(args[0]) + Math.pow(args[1]))
+    if(arguments.length !== 2) return false;
+    const c = Math.sqrt(Math.pow(args[0], 2) + Math.pow(args[1], 2))
     return c
 }
 module.exports = {
